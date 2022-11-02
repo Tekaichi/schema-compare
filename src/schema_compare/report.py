@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+template = """<!DOCTYPE html>
 <html>
     <head>
     </head>
@@ -6,3 +6,4 @@
     {{body}}
     </body>
 </html>
+"""

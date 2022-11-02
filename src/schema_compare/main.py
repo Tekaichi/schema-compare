@@ -1,6 +1,7 @@
 import sys
 import tomli
 from schema_compare.drivers.postgresql.connection import Connection
+import schema_compare
 
 def main():
     if len(sys.argv) < 2:
@@ -28,23 +29,14 @@ def main():
 
     result = source[source.apply(not_exists, axis = 1)]
     print("The following are not present in target schema:")
-    print(result)
+    print(result.to_string())
     print(f"Target schema has less {len(result)} (table_name,column_name) than source schema")
-    result = result.to_html()
-
-    import os
-    absolute_path = os.path.dirname(__file__)
-    relative_path = "report.html"
-    full_path = os.path.join(absolute_path, relative_path)
-
-    f = open(full_path,"r")
-
-    content = f.read()
-
-    output = open("/output.html","w")
-    output.write(content.replace("{{body}}",result))
-    output.close()
-    f.close()
+    #result = result.to_html()
+    #print("Generating report")
+    #output = open("/output.html","w")
+    #result = schema_compare.TEMPLATE.replace("{{body}}",result)
+    #output.write(result)
+    #output.close()
 
 if __name__ == "__main__":
     main()
