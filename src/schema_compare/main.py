@@ -25,7 +25,7 @@ def main():
         return ((table_name  == target["table_name"]).sum() + (column_name  == target["column_name"]).sum()) == 0
 
     print(f'Source schema has {len(source)} (table_name,column_name)')
-    print(f'Target schema has {len(source)} (table_name,column_name)')
+    print(f'Target schema has {len(target)} (table_name,column_name)')
 
     result = source[source.apply(not_exists, axis = 1)]
     print("The following are not present in target schema:")
