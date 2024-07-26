@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "schema-compare"
-version = "1.0.10"
+version = "1.0.11"
 description = "Compare database schemas"
 readme = "README.md"
 authors = [{ name = "Miguel Cardoso", email = "msd.cardoso@hotmail.com" }]
@@ -16,8 +16,8 @@ classifiers = [
 ]
 keywords = ["database", "schema"]
 dependencies = [
-    "psycopg2==2.9.5",
-    "SQLAlchemy==1.4.42",
+    "psycopg2==2.9.9",
+    "SQLAlchemy==2.0.31",
     "pandas==2.2.2",
     "tomli==2.0.1"
 ]
