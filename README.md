@@ -1,6 +1,7 @@
 # Schema Compare
 Schema compare is a simple utility tool with the sole goal of comparing schemas between two databases. Currently it only supports postgresql.
 
+[![Upload Python Package](https://github.com/Tekaichi/schema-compare/actions/workflows/python-publish.yml/badge.svg?event=release)](https://github.com/Tekaichi/schema-compare/actions/workflows/python-publish.yml)
 
 ### Installation
 You can install Schema Compare from PyPi:
